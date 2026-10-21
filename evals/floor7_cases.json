@@ -1,0 +1,14 @@
+[
+  {"id":"full-evidence", "changes":{}, "status":"answered", "hypotheses":["airflow_restriction","damper_tracking_fault"]},
+  {"id":"no-tracking-mismatch", "changes":{"damper_actual":"84"}, "status":"answered", "hypotheses":["airflow_restriction"]},
+  {"id":"negative-position", "changes":{"damper_actual":"-1"}, "status":"answered", "hypotheses":["airflow_restriction"]},
+  {"id":"invalid-command", "changes":{"damper_command":"101"}, "status":"answered", "hypotheses":["airflow_restriction"]},
+  {"id":"not-warm", "changes":{"temperature":"23"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"ahu-stopped", "changes":{"status":"Stopped"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"abnormal-supply", "changes":{"supply_air_temperature":"Abnormal"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"normal-flow", "changes":{"airflow_deficit":"10"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"impossible-deficit", "changes":{"airflow_deficit":"120"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"nonnumeric-flow", "changes":{"airflow_deficit":"unknown"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"nan-temperature", "changes":{"temperature":"NaN"}, "status":"insufficient_evidence", "hypotheses":[]},
+  {"id":"infinite-setpoint", "changes":{"setpoint":"Infinity"}, "status":"insufficient_evidence", "hypotheses":[]}
+]

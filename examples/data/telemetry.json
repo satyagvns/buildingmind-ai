@@ -1,0 +1,48 @@
+{
+  "synthetic": true,
+  "observed_at": "2026-10-21T08:00:00+00:00",
+  "measurements": [
+    {
+      "subject": "Floor 7",
+      "metric": "temperature",
+      "value": "27.4",
+      "unit": "\u00b0C"
+    },
+    {
+      "subject": "Floor 7",
+      "metric": "setpoint",
+      "value": "23",
+      "unit": "\u00b0C"
+    },
+    {
+      "subject": "AHU-07",
+      "metric": "status",
+      "value": "Running",
+      "unit": ""
+    },
+    {
+      "subject": "AHU-07",
+      "metric": "supply_air_temperature",
+      "value": "Normal",
+      "unit": ""
+    },
+    {
+      "subject": "VAV-7E-14",
+      "metric": "airflow_deficit",
+      "value": "62",
+      "unit": "%"
+    },
+    {
+      "subject": "VAV-7E-14",
+      "metric": "damper_command",
+      "value": "85",
+      "unit": "%"
+    },
+    {
+      "subject": "VAV-7E-14",
+      "metric": "damper_actual",
+      "value": "31",
+      "unit": "%"
+    }
+  ]
+}

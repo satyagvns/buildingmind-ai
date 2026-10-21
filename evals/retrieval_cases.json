@@ -1,0 +1,37 @@
+[
+  {
+    "id": "manual-airflow",
+    "query": "AHU-07 supply-air temperature VAV zone airflow damper feedback",
+    "floor": "7",
+    "equipment": ["AHU-07"],
+    "expected_top_source": "synthetic:ahu07_manual.md"
+  },
+  {
+    "id": "maintenance-tracking",
+    "query": "AHU-07 technician intermittent position tracking September maintenance",
+    "floor": "7",
+    "equipment": ["AHU-07"],
+    "expected_top_source": "synthetic:maintenance.md"
+  },
+  {
+    "id": "different-floor",
+    "query": "AHU-08 Floor 8 cooling",
+    "floor": "8",
+    "equipment": ["AHU-08"],
+    "expected_top_source": null
+  },
+  {
+    "id": "different-equipment",
+    "query": "AHU-08 supply-air temperature",
+    "floor": "7",
+    "equipment": ["AHU-08"],
+    "expected_top_source": null
+  },
+  {
+    "id": "empty-query",
+    "query": " ",
+    "floor": "7",
+    "equipment": ["AHU-07"],
+    "expected_top_source": null
+  }
+]
