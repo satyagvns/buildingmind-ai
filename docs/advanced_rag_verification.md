@@ -62,3 +62,11 @@ measured timings and limitations. CI changes only extend Ruff checks to evaluati
 - `src/buildingmind/retrieval/reranking.py`
 - `tests/test_advanced_rag.py`
 - `tests/test_package.py`
+
+
+## Pre-merge follow-up
+
+Current checks now pass 103 core tests (one optional skip) and 104 with the SDK, with
+96% statement coverage. See [pre-merge verification](premerge_verification.md) for the
+eight targeted retrieval cases, repeated latency results, twelve added checks, actual
+v0.4 comparison, and retriever-boundary authorization hardening.

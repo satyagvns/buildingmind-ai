@@ -56,3 +56,12 @@ The full example output is in `docs/floor7_advanced_output.json`. It observes lo
 and the command/feedback mismatch; proposes actuator/linkage/feedback trouble tentatively;
 cites `synthetic:approved-verification` for qualified human checks; and explicitly reports
 the superseded procedure. No building operation is executed.
+
+
+## Expanded pre-merge checks
+
+The original four-case results above are retained as a historical snapshot. The expanded
+eight-case comparison, repeated latency measurements, authorization review and archived
+v0.4 regression comparison are in [pre-merge verification](premerge_verification.md).
+The expanded corpus shows a small plain-hybrid MRR gain but no Recall@3/nDCG@3 gain;
+keyword-only and lexical reranking perform better on that set.

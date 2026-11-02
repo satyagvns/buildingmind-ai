@@ -25,3 +25,10 @@ For v0.5 graded ranking comparisons and generation regressions, run
 `python -m evals.run_advanced` and `python -m evals.run_generation`.
 See [retrieval evaluation](../docs/retrieval_evaluation.md) for definitions, measured
 results and limitations. Machine-readable result snapshots are stored beside the runners.
+
+
+Pre-merge checks: `python -m evals.run_premerge` compares eight targeted cases and
+measures 240 warm latency samples per mode. `python -m evals.check_legacy_regression`
+runs archived v0.4 tests and compares normalized public responses. The latter requires
+local git object `22cbddc` and uses a temporary directory without switching branches.
+See [pre-merge verification](../docs/premerge_verification.md).

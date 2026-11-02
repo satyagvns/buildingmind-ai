@@ -182,3 +182,8 @@ See [advanced architecture](docs/advanced_rag_architecture.md),
 [recorded demonstration](docs/floor7_advanced_output.json). The small synthetic benchmark
 shows equal recall across strategies and a small hybrid nDCG difference; it establishes
 neither production semantic-search quality nor confirmed physical causes.
+
+
+For the expanded pre-merge retrieval/security/regression review and repeated latency
+measurements, see [pre-merge verification](docs/premerge_verification.md). Reproduce with
+`python -m evals.run_premerge` and `python -m evals.check_legacy_regression`.

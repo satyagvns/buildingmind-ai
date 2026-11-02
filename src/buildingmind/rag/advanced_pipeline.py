@@ -65,7 +65,15 @@ class AdvancedRAGPipeline:
             equipment=query.equipment_ids,
         )
         try:
-            report = self.retriever.retrieve(query, filters)
+            raw_report = self.retriever.retrieve(query, filters)
+            # Recheck the injected retriever boundary before reranking or returning diagnostics.
+            # Never expose a rejected candidate in the public retrieval report.
+            if any(not filters.matches(c.evidence) for c in raw_report.candidates):
+                report = RetrievalReport(
+                    complete=False, errors=("Retriever authorization validation failed.",)
+                )
+            else:
+                report = raw_report
             if not report.complete:
                 return DiagnosticResponse(
                     question=question, status="provider_error", evidence_gaps=report.errors
