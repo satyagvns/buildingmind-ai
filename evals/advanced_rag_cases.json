@@ -1,0 +1,35 @@
+[
+  {
+    "id": "exact-vav",
+    "question": "VAV-7E-14 actuator serial ZX-7419",
+    "relevant_sources": {
+      "synthetic:equipment-register": 3
+    }
+  },
+  {
+    "id": "damper-verification",
+    "question": "AHU-07 low airflow damper command actual position feedback verification",
+    "relevant_sources": {
+      "synthetic:approved-verification": 3,
+      "synthetic:ahu-troubleshooting": 2,
+      "synthetic:vav-incident": 1
+    }
+  },
+  {
+    "id": "running-ahu",
+    "question": "Why is Floor 7 getting warmer even though AHU-07 is running?",
+    "relevant_sources": {
+      "synthetic:approved-verification": 3,
+      "synthetic:ahu-troubleshooting": 2,
+      "synthetic:vav-incident": 1
+    }
+  },
+  {
+    "id": "historical-actuator",
+    "question": "VAV-7E-14 loose linkage earlier actuator incident",
+    "relevant_sources": {
+      "synthetic:vav-incident": 3,
+      "synthetic:approved-verification": 1
+    }
+  }
+]

@@ -1,0 +1,714 @@
+{
+  "answer": {
+    "question": "Why is Floor 7 getting warmer even though AHU-07 is running?",
+    "status": "answered",
+    "observations": [
+      {
+        "text": "Floor 7: temperature = 27.4 \u00b0C",
+        "citation": {
+          "evidence_id": "sensor-5a38de8d4440b60d42c98c37",
+          "source_id": "telemetry:Floor 7:temperature",
+          "title": "Floor 7 temperature",
+          "kind": "telemetry",
+          "quote": "Floor 7: temperature = 27.4 \u00b0C",
+          "start_char": 0,
+          "end_char": 30,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      },
+      {
+        "text": "Floor 7: setpoint = 23 \u00b0C",
+        "citation": {
+          "evidence_id": "sensor-56bd3e17ba93e0054f5145db",
+          "source_id": "telemetry:Floor 7:setpoint",
+          "title": "Floor 7 setpoint",
+          "kind": "telemetry",
+          "quote": "Floor 7: setpoint = 23 \u00b0C",
+          "start_char": 0,
+          "end_char": 25,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      },
+      {
+        "text": "AHU-07: status = Running",
+        "citation": {
+          "evidence_id": "sensor-4eae578768d02e024fd16cbd",
+          "source_id": "telemetry:AHU-07:status",
+          "title": "AHU-07 status",
+          "kind": "telemetry",
+          "quote": "AHU-07: status = Running",
+          "start_char": 0,
+          "end_char": 24,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      },
+      {
+        "text": "AHU-07: supply_air_temperature = Normal",
+        "citation": {
+          "evidence_id": "sensor-4e921d3f1a2969aeccc2e2ad",
+          "source_id": "telemetry:AHU-07:supply_air_temperature",
+          "title": "AHU-07 supply_air_temperature",
+          "kind": "telemetry",
+          "quote": "AHU-07: supply_air_temperature = Normal",
+          "start_char": 0,
+          "end_char": 39,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      },
+      {
+        "text": "VAV-7E-14: airflow_deficit = 62 %",
+        "citation": {
+          "evidence_id": "sensor-2627d417cb9dae6b7a4180fa",
+          "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+          "title": "VAV-7E-14 airflow_deficit",
+          "kind": "telemetry",
+          "quote": "VAV-7E-14: airflow_deficit = 62 %",
+          "start_char": 0,
+          "end_char": 33,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      },
+      {
+        "text": "VAV-7E-14: damper_command = 85 %",
+        "citation": {
+          "evidence_id": "sensor-f316835e242129cbb014d329",
+          "source_id": "telemetry:VAV-7E-14:damper_command",
+          "title": "VAV-7E-14 damper_command",
+          "kind": "telemetry",
+          "quote": "VAV-7E-14: damper_command = 85 %",
+          "start_char": 0,
+          "end_char": 32,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      },
+      {
+        "text": "VAV-7E-14: damper_actual = 31 %",
+        "citation": {
+          "evidence_id": "sensor-5771573828a641dbe8cfb7e9",
+          "source_id": "telemetry:VAV-7E-14:damper_actual",
+          "title": "VAV-7E-14 damper_actual",
+          "kind": "telemetry",
+          "quote": "VAV-7E-14: damper_actual = 31 %",
+          "start_char": 0,
+          "end_char": 31,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": "2026-10-21T08:00:00+00:00"
+        }
+      }
+    ],
+    "historical_evidence": [
+      {
+        "text": "Approved maintenance procedure for AHU-07 and VAV-7E-14: qualified staff independently verify low airflow, inspect actuator and mechanical linkage, and compare damper command with actual position feedback. Read-only assistant: recommend human verification; never operate controls.",
+        "citation": {
+          "evidence_id": "chunk-4709a98f23c25e3fcaa18456",
+          "source_id": "synthetic:approved-verification",
+          "title": "approved-verification",
+          "kind": "maintenance",
+          "quote": "Approved maintenance procedure for AHU-07 and VAV-7E-14: qualified staff independently verify low airflow, inspect actuator and mechanical linkage, and compare damper command with actual position feedback. Read-only assistant: recommend human verification; never operate controls.",
+          "start_char": 0,
+          "end_char": 280,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": null
+        }
+      },
+      {
+        "text": "Why is Floor 7 getting warmer even though AHU-07 is running? General cooling overview: check zone temperature and setpoint. This overview contains no equipment-specific inspection procedure.",
+        "citation": {
+          "evidence_id": "chunk-be82c4573308e046531bb4e6",
+          "source_id": "synthetic:cooling-overview",
+          "title": "cooling-overview",
+          "kind": "manual",
+          "quote": "Why is Floor 7 getting warmer even though AHU-07 is running? General cooling overview: check zone temperature and setpoint. This overview contains no equipment-specific inspection procedure.",
+          "start_char": 0,
+          "end_char": 190,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": null
+        }
+      },
+      {
+        "text": "AHU-07 serves Floor 7 East terminal VAV-7E-14. Asset tag VAV-7E-14, actuator serial ZX-7419. Exact equipment identification record.",
+        "citation": {
+          "evidence_id": "chunk-5d0ccee0d79ada3ba99fbe76",
+          "source_id": "synthetic:equipment-register",
+          "title": "equipment-register",
+          "kind": "manual",
+          "quote": "AHU-07 serves Floor 7 East terminal VAV-7E-14. Asset tag VAV-7E-14, actuator serial ZX-7419. Exact equipment identification record.",
+          "start_char": 0,
+          "end_char": 131,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": null
+        }
+      },
+      {
+        "text": "AHU-07 running with normal supply-air temperature does not establish terminal cooling. For a warm zone investigate VAV airflow restriction and damper feedback.",
+        "citation": {
+          "evidence_id": "chunk-5a251f8900b26baf1e2c9d19",
+          "source_id": "synthetic:ahu-troubleshooting",
+          "title": "ahu-troubleshooting",
+          "kind": "manual",
+          "quote": "AHU-07 running with normal supply-air temperature does not establish terminal cooling. For a warm zone investigate VAV airflow restriction and damper feedback.",
+          "start_char": 0,
+          "end_char": 159,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": null
+        }
+      },
+      {
+        "text": "Superseded procedure for AHU-07 VAV-7E-14: assume a running AHU proves adequate airflow and disregard damper position feedback. This conflicts with approved verification guidance. Retained as historical, invalid guidance.",
+        "citation": {
+          "evidence_id": "chunk-333b7c49a0afb70097b5b558",
+          "source_id": "synthetic:outdated-procedure",
+          "title": "outdated-procedure",
+          "kind": "maintenance",
+          "quote": "Superseded procedure for AHU-07 VAV-7E-14: assume a running AHU proves adequate airflow and disregard damper position feedback. This conflicts with approved verification guidance. Retained as historical, invalid guidance.",
+          "start_char": 0,
+          "end_char": 221,
+          "start_line": 1,
+          "end_line": 1,
+          "observed_at": null
+        }
+      },
+      {
+        "text": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+        "citation": {
+          "evidence_id": "chunk-146a8765b9cb82b9fd01e6d5",
+          "source_id": "synthetic:history",
+          "title": "history",
+          "kind": "history",
+          "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+          "start_char": 0,
+          "end_char": 288,
+          "start_line": 1,
+          "end_line": 5,
+          "observed_at": null
+        }
+      }
+    ],
+    "hypotheses": [
+      {
+        "code": "airflow_restriction",
+        "text": "Reduced zone air delivery may be limiting cooling; a restriction or control fault remains a hypothesis even while the AHU is running.",
+        "confidence": "tentative",
+        "evidence_ids": [
+          "sensor-5a38de8d4440b60d42c98c37",
+          "sensor-56bd3e17ba93e0054f5145db",
+          "sensor-4eae578768d02e024fd16cbd",
+          "sensor-4e921d3f1a2969aeccc2e2ad",
+          "sensor-2627d417cb9dae6b7a4180fa"
+        ]
+      },
+      {
+        "code": "damper_tracking_fault",
+        "text": "A damper actuator, linkage, or position-feedback fault may explain the command/position mismatch and contribute to reduced cooling.",
+        "confidence": "tentative",
+        "evidence_ids": [
+          "sensor-5a38de8d4440b60d42c98c37",
+          "sensor-56bd3e17ba93e0054f5145db",
+          "sensor-4eae578768d02e024fd16cbd",
+          "sensor-4e921d3f1a2969aeccc2e2ad",
+          "sensor-2627d417cb9dae6b7a4180fa",
+          "sensor-f316835e242129cbb014d329",
+          "sensor-5771573828a641dbe8cfb7e9"
+        ]
+      }
+    ],
+    "verification_steps": [
+      "Have qualified staff verify airflow, actuator/linkage and position feedback using approved procedure synthetic:approved-verification.",
+      "Review time-aligned measurements before confirming a root cause."
+    ],
+    "citations": [
+      {
+        "evidence_id": "sensor-5a38de8d4440b60d42c98c37",
+        "source_id": "telemetry:Floor 7:temperature",
+        "title": "Floor 7 temperature",
+        "kind": "telemetry",
+        "quote": "Floor 7: temperature = 27.4 \u00b0C",
+        "start_char": 0,
+        "end_char": 30,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "sensor-56bd3e17ba93e0054f5145db",
+        "source_id": "telemetry:Floor 7:setpoint",
+        "title": "Floor 7 setpoint",
+        "kind": "telemetry",
+        "quote": "Floor 7: setpoint = 23 \u00b0C",
+        "start_char": 0,
+        "end_char": 25,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "sensor-4eae578768d02e024fd16cbd",
+        "source_id": "telemetry:AHU-07:status",
+        "title": "AHU-07 status",
+        "kind": "telemetry",
+        "quote": "AHU-07: status = Running",
+        "start_char": 0,
+        "end_char": 24,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "sensor-4e921d3f1a2969aeccc2e2ad",
+        "source_id": "telemetry:AHU-07:supply_air_temperature",
+        "title": "AHU-07 supply_air_temperature",
+        "kind": "telemetry",
+        "quote": "AHU-07: supply_air_temperature = Normal",
+        "start_char": 0,
+        "end_char": 39,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "sensor-2627d417cb9dae6b7a4180fa",
+        "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+        "title": "VAV-7E-14 airflow_deficit",
+        "kind": "telemetry",
+        "quote": "VAV-7E-14: airflow_deficit = 62 %",
+        "start_char": 0,
+        "end_char": 33,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "sensor-f316835e242129cbb014d329",
+        "source_id": "telemetry:VAV-7E-14:damper_command",
+        "title": "VAV-7E-14 damper_command",
+        "kind": "telemetry",
+        "quote": "VAV-7E-14: damper_command = 85 %",
+        "start_char": 0,
+        "end_char": 32,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "sensor-5771573828a641dbe8cfb7e9",
+        "source_id": "telemetry:VAV-7E-14:damper_actual",
+        "title": "VAV-7E-14 damper_actual",
+        "kind": "telemetry",
+        "quote": "VAV-7E-14: damper_actual = 31 %",
+        "start_char": 0,
+        "end_char": 31,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": "2026-10-21T08:00:00+00:00"
+      },
+      {
+        "evidence_id": "chunk-4709a98f23c25e3fcaa18456",
+        "source_id": "synthetic:approved-verification",
+        "title": "approved-verification",
+        "kind": "maintenance",
+        "quote": "Approved maintenance procedure for AHU-07 and VAV-7E-14: qualified staff independently verify low airflow, inspect actuator and mechanical linkage, and compare damper command with actual position feedback. Read-only assistant: recommend human verification; never operate controls.",
+        "start_char": 0,
+        "end_char": 280,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": null
+      },
+      {
+        "evidence_id": "chunk-be82c4573308e046531bb4e6",
+        "source_id": "synthetic:cooling-overview",
+        "title": "cooling-overview",
+        "kind": "manual",
+        "quote": "Why is Floor 7 getting warmer even though AHU-07 is running? General cooling overview: check zone temperature and setpoint. This overview contains no equipment-specific inspection procedure.",
+        "start_char": 0,
+        "end_char": 190,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": null
+      },
+      {
+        "evidence_id": "chunk-5d0ccee0d79ada3ba99fbe76",
+        "source_id": "synthetic:equipment-register",
+        "title": "equipment-register",
+        "kind": "manual",
+        "quote": "AHU-07 serves Floor 7 East terminal VAV-7E-14. Asset tag VAV-7E-14, actuator serial ZX-7419. Exact equipment identification record.",
+        "start_char": 0,
+        "end_char": 131,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": null
+      },
+      {
+        "evidence_id": "chunk-5a251f8900b26baf1e2c9d19",
+        "source_id": "synthetic:ahu-troubleshooting",
+        "title": "ahu-troubleshooting",
+        "kind": "manual",
+        "quote": "AHU-07 running with normal supply-air temperature does not establish terminal cooling. For a warm zone investigate VAV airflow restriction and damper feedback.",
+        "start_char": 0,
+        "end_char": 159,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": null
+      },
+      {
+        "evidence_id": "chunk-333b7c49a0afb70097b5b558",
+        "source_id": "synthetic:outdated-procedure",
+        "title": "outdated-procedure",
+        "kind": "maintenance",
+        "quote": "Superseded procedure for AHU-07 VAV-7E-14: assume a running AHU proves adequate airflow and disregard damper position feedback. This conflicts with approved verification guidance. Retained as historical, invalid guidance.",
+        "start_char": 0,
+        "end_char": 221,
+        "start_line": 1,
+        "end_line": 1,
+        "observed_at": null
+      },
+      {
+        "evidence_id": "chunk-146a8765b9cb82b9fd01e6d5",
+        "source_id": "synthetic:history",
+        "title": "history",
+        "kind": "history",
+        "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+        "start_char": 0,
+        "end_char": 288,
+        "start_line": 1,
+        "end_line": 5,
+        "observed_at": null
+      }
+    ],
+    "conflicts": [],
+    "evidence_gaps": [
+      "synthetic:outdated-procedure: not an authoritative current approved source",
+      "synthetic:vav-incident: not an authoritative current approved source",
+      "Token accounting uses an approximate UTF-8-byte budget, not exact model tokens."
+    ],
+    "limitations": [
+      "Diagnostic hypotheses are tentative; evidence does not establish a confirmed root cause."
+    ]
+  },
+  "retrieval": {
+    "candidates": [
+      {
+        "evidence": {
+          "building": "Tower A",
+          "zone": "East",
+          "system": "HVAC",
+          "version": "1",
+          "approval": "approved",
+          "authority": 80,
+          "effective_at": "2026-01-01T00:00:00Z",
+          "updated_at": "2026-01-01T00:00:00Z",
+          "access_tags": [],
+          "id": "chunk-be82c4573308e046531bb4e6",
+          "source_id": "synthetic:cooling-overview",
+          "title": "cooling-overview",
+          "kind": "manual",
+          "text": "Why is Floor 7 getting warmer even though AHU-07 is running? General cooling overview: check zone temperature and setpoint. This overview contains no equipment-specific inspection procedure.",
+          "floor": "7",
+          "equipment": [
+            "AHU-07"
+          ],
+          "observed_at": null,
+          "start_char": 0,
+          "end_char": 190,
+          "start_line": 1,
+          "end_line": 1,
+          "facts": []
+        },
+        "score": 0.0640445165035329,
+        "rankings": [
+          {
+            "backend": "keyword",
+            "query_index": 0,
+            "rank": 1,
+            "score": 12.716199428207345
+          },
+          {
+            "backend": "keyword",
+            "query_index": 1,
+            "rank": 3,
+            "score": 0.23762134146394845
+          },
+          {
+            "backend": "vector",
+            "query_index": 0,
+            "rank": 1,
+            "score": 0.6582805886043834
+          },
+          {
+            "backend": "vector",
+            "query_index": 1,
+            "rank": 5,
+            "score": 0.11009637651263607
+          }
+        ],
+        "rerank_score": 12.0
+      },
+      {
+        "evidence": {
+          "building": "Tower A",
+          "zone": "East",
+          "system": "HVAC",
+          "version": "1",
+          "approval": "approved",
+          "authority": 80,
+          "effective_at": "2026-01-01T00:00:00Z",
+          "updated_at": "2026-01-01T00:00:00Z",
+          "access_tags": [],
+          "id": "chunk-5d0ccee0d79ada3ba99fbe76",
+          "source_id": "synthetic:equipment-register",
+          "title": "equipment-register",
+          "kind": "manual",
+          "text": "AHU-07 serves Floor 7 East terminal VAV-7E-14. Asset tag VAV-7E-14, actuator serial ZX-7419. Exact equipment identification record.",
+          "floor": "7",
+          "equipment": [
+            "AHU-07",
+            "VAV-7E-14"
+          ],
+          "observed_at": null,
+          "start_char": 0,
+          "end_char": 131,
+          "start_line": 1,
+          "end_line": 1,
+          "facts": []
+        },
+        "score": 0.08019646491354583,
+        "rankings": [
+          {
+            "backend": "keyword",
+            "query_index": 0,
+            "rank": 2,
+            "score": 2.6937614158050396
+          },
+          {
+            "backend": "keyword",
+            "query_index": 1,
+            "rank": 1,
+            "score": 0.28239992694338967
+          },
+          {
+            "backend": "keyword",
+            "query_index": 2,
+            "rank": 1,
+            "score": 0.7046923220927903
+          },
+          {
+            "backend": "vector",
+            "query_index": 0,
+            "rank": 2,
+            "score": 0.19088542889273336
+          },
+          {
+            "backend": "vector",
+            "query_index": 1,
+            "rank": 6,
+            "score": 0.06917144638660747
+          }
+        ],
+        "rerank_score": 5.0
+      },
+      {
+        "evidence": {
+          "building": "Tower A",
+          "zone": "East",
+          "system": "HVAC",
+          "version": "1",
+          "approval": "superseded",
+          "authority": 20,
+          "effective_at": "2020-01-01T00:00:00Z",
+          "updated_at": "2020-01-01T00:00:00Z",
+          "access_tags": [],
+          "id": "chunk-333b7c49a0afb70097b5b558",
+          "source_id": "synthetic:outdated-procedure",
+          "title": "outdated-procedure",
+          "kind": "maintenance",
+          "text": "Superseded procedure for AHU-07 VAV-7E-14: assume a running AHU proves adequate airflow and disregard damper position feedback. This conflicts with approved verification guidance. Retained as historical, invalid guidance.",
+          "floor": "7",
+          "equipment": [
+            "AHU-07",
+            "VAV-7E-14"
+          ],
+          "observed_at": null,
+          "start_char": 0,
+          "end_char": 221,
+          "start_line": 1,
+          "end_line": 1,
+          "facts": []
+        },
+        "score": 0.07887704813108039,
+        "rankings": [
+          {
+            "backend": "keyword",
+            "query_index": 0,
+            "rank": 4,
+            "score": 0.8892574525301092
+          },
+          {
+            "backend": "keyword",
+            "query_index": 1,
+            "rank": 4,
+            "score": 0.2295333790063038
+          },
+          {
+            "backend": "keyword",
+            "query_index": 2,
+            "rank": 3,
+            "score": 0.4205278638142762
+          },
+          {
+            "backend": "vector",
+            "query_index": 0,
+            "rank": 4,
+            "score": 0.10127393670836668
+          },
+          {
+            "backend": "vector",
+            "query_index": 1,
+            "rank": 2,
+            "score": 0.27524094128159016
+          }
+        ],
+        "rerank_score": 4.0
+      },
+      {
+        "evidence": {
+          "building": "Tower A",
+          "zone": "East",
+          "system": "HVAC",
+          "version": "1",
+          "approval": "approved",
+          "authority": 80,
+          "effective_at": "2026-01-01T00:00:00Z",
+          "updated_at": "2026-01-01T00:00:00Z",
+          "access_tags": [],
+          "id": "chunk-5a251f8900b26baf1e2c9d19",
+          "source_id": "synthetic:ahu-troubleshooting",
+          "title": "ahu-troubleshooting",
+          "kind": "manual",
+          "text": "AHU-07 running with normal supply-air temperature does not establish terminal cooling. For a warm zone investigate VAV airflow restriction and damper feedback.",
+          "floor": "7",
+          "equipment": [
+            "AHU-07",
+            "VAV-7E-14"
+          ],
+          "observed_at": null,
+          "start_char": 0,
+          "end_char": 159,
+          "start_line": 1,
+          "end_line": 1,
+          "facts": []
+        },
+        "score": 0.06426850662704708,
+        "rankings": [
+          {
+            "backend": "keyword",
+            "query_index": 0,
+            "rank": 3,
+            "score": 0.9903874681916591
+          },
+          {
+            "backend": "keyword",
+            "query_index": 1,
+            "rank": 2,
+            "score": 0.2556368591038968
+          },
+          {
+            "backend": "vector",
+            "query_index": 0,
+            "rank": 3,
+            "score": 0.11826247919781653
+          },
+          {
+            "backend": "vector",
+            "query_index": 1,
+            "rank": 1,
+            "score": 0.38569460791993504
+          }
+        ],
+        "rerank_score": 4.0
+      },
+      {
+        "evidence": {
+          "building": "Tower A",
+          "zone": "East",
+          "system": "HVAC",
+          "version": "3",
+          "approval": "approved",
+          "authority": 100,
+          "effective_at": "2026-01-01T00:00:00Z",
+          "updated_at": "2026-01-01T00:00:00Z",
+          "access_tags": [],
+          "id": "chunk-4709a98f23c25e3fcaa18456",
+          "source_id": "synthetic:approved-verification",
+          "title": "approved-verification",
+          "kind": "maintenance",
+          "text": "Approved maintenance procedure for AHU-07 and VAV-7E-14: qualified staff independently verify low airflow, inspect actuator and mechanical linkage, and compare damper command with actual position feedback. Read-only assistant: recommend human verification; never operate controls.",
+          "floor": "7",
+          "equipment": [
+            "AHU-07",
+            "VAV-7E-14"
+          ],
+          "observed_at": null,
+          "start_char": 0,
+          "end_char": 280,
+          "start_line": 1,
+          "end_line": 1,
+          "facts": []
+        },
+        "score": 0.07765186202686203,
+        "rankings": [
+          {
+            "backend": "keyword",
+            "query_index": 0,
+            "rank": 5,
+            "score": 0.20826691781155332
+          },
+          {
+            "backend": "keyword",
+            "query_index": 1,
+            "rank": 5,
+            "score": 0.20826691781155332
+          },
+          {
+            "backend": "keyword",
+            "query_index": 2,
+            "rank": 4,
+            "score": 0.38156560248289917
+          },
+          {
+            "backend": "vector",
+            "query_index": 0,
+            "rank": 5,
+            "score": 0.042796049251091296
+          },
+          {
+            "backend": "vector",
+            "query_index": 1,
+            "rank": 3,
+            "score": 0.23262105259961774
+          }
+        ],
+        "rerank_score": 3.0
+      }
+    ],
+    "errors": [],
+    "complete": true,
+    "elapsed_seconds": 0.002707971000290854,
+    "rerank_seconds": 0.00017796199972508475
+  }
+}

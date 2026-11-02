@@ -1,0 +1,76 @@
+[
+  {
+    "id": "exact-equipment",
+    "category": "exact_identifier",
+    "question": "VAV-7E-14 actuator serial ZX-7419",
+    "relevant_sources": {
+      "synthetic:equipment-register": 3
+    }
+  },
+  {
+    "id": "exact-work-order",
+    "category": "exact_identifier",
+    "question": "VAV-7E-14 WO-0714",
+    "relevant_sources": {
+      "synthetic:review:long-service-log": 3
+    },
+    "required_relevance_quotes": {
+      "synthetic:review:long-service-log": "WO-0714"
+    }
+  },
+  {
+    "id": "lookalike-id",
+    "category": "exact_identifier",
+    "question": "VAV-7E-140 ZX-74190",
+    "relevant_sources": {
+      "synthetic:review:lookalike-asset": 3
+    }
+  },
+  {
+    "id": "ambiguous-hunting",
+    "category": "ambiguous_maintenance",
+    "question": "VAV-7E-14 actuator hunting position drift linkage coupling inspection",
+    "relevant_sources": {
+      "synthetic:review:long-service-log": 3,
+      "synthetic:vav-incident": 2,
+      "synthetic:approved-verification": 1
+    },
+    "required_relevance_quotes": {
+      "synthetic:review:long-service-log": "WO-0714"
+    }
+  },
+  {
+    "id": "ambiguous-paperwork",
+    "category": "ambiguous_maintenance",
+    "question": "AHU-07 hunting missing maintenance paperwork scheduling queue",
+    "relevant_sources": {
+      "synthetic:review:electrical-maintenance": 3
+    }
+  },
+  {
+    "id": "current-procedure",
+    "category": "outdated_procedure",
+    "question": "AHU-07 VAV-7E-14 current approved maintenance procedure verify airflow feedback",
+    "relevant_sources": {
+      "synthetic:approved-verification": 3
+    }
+  },
+  {
+    "id": "compare-procedure-versions",
+    "category": "outdated_procedure",
+    "question": "AHU-07 VAV-7E-14 compare superseded procedure with approved verification guidance",
+    "relevant_sources": {
+      "synthetic:approved-verification": 3,
+      "synthetic:outdated-procedure": 2
+    }
+  },
+  {
+    "id": "conflicting-inspection",
+    "category": "conflicting_evidence",
+    "question": "VAV-7E-14 inspection I-714 position disagree",
+    "relevant_sources": {
+      "synthetic:review:inspection-normal": 3,
+      "synthetic:review:inspection-disagrees": 3
+    }
+  }
+]

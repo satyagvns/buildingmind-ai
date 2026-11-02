@@ -1,0 +1,996 @@
+{
+  "baseline_commit": "22cbddc",
+  "test_results": {
+    "baseline": "73 passed, 1 skipped in 0.81s",
+    "current": "72 passed, 1 skipped, 1 deselected in 0.76s"
+  },
+  "intentional_exclusion": "Current source version is 0.5.0; exclude the archived 0.4.0 version assertion only for the current-source run.",
+  "snapshot_comparison": "equal after normalizing revision-specific evidence IDs to source/offset references",
+  "scenarios": [
+    "full",
+    "missing-history",
+    "missing-records",
+    "missing-telemetry"
+  ],
+  "normalized_output": {
+    "full": {
+      "citations": [
+        {
+          "end_char": 30,
+          "end_line": 1,
+          "evidence_id": "telemetry:Floor 7:temperature:0:30",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "Floor 7: temperature = 27.4 \u00b0C",
+          "source_id": "telemetry:Floor 7:temperature",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "Floor 7 temperature"
+        },
+        {
+          "end_char": 25,
+          "end_line": 1,
+          "evidence_id": "telemetry:Floor 7:setpoint:0:25",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "Floor 7: setpoint = 23 \u00b0C",
+          "source_id": "telemetry:Floor 7:setpoint",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "Floor 7 setpoint"
+        },
+        {
+          "end_char": 24,
+          "end_line": 1,
+          "evidence_id": "telemetry:AHU-07:status:0:24",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "AHU-07: status = Running",
+          "source_id": "telemetry:AHU-07:status",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "AHU-07 status"
+        },
+        {
+          "end_char": 39,
+          "end_line": 1,
+          "evidence_id": "telemetry:AHU-07:supply_air_temperature:0:39",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "AHU-07: supply_air_temperature = Normal",
+          "source_id": "telemetry:AHU-07:supply_air_temperature",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "AHU-07 supply_air_temperature"
+        },
+        {
+          "end_char": 33,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:airflow_deficit:0:33",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: airflow_deficit = 62 %",
+          "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 airflow_deficit"
+        },
+        {
+          "end_char": 32,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:damper_command:0:32",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: damper_command = 85 %",
+          "source_id": "telemetry:VAV-7E-14:damper_command",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 damper_command"
+        },
+        {
+          "end_char": 31,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:damper_actual:0:31",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: damper_actual = 31 %",
+          "source_id": "telemetry:VAV-7E-14:damper_actual",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 damper_actual"
+        },
+        {
+          "end_char": 400,
+          "end_line": 6,
+          "evidence_id": "synthetic:ahu07_manual.md:0:400",
+          "kind": "manual",
+          "observed_at": null,
+          "quote": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n",
+          "source_id": "synthetic:ahu07_manual.md",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "ahu07_manual"
+        },
+        {
+          "end_char": 318,
+          "end_line": 5,
+          "evidence_id": "synthetic:maintenance.md:0:318",
+          "kind": "maintenance",
+          "observed_at": null,
+          "quote": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n",
+          "source_id": "synthetic:maintenance.md",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "maintenance"
+        },
+        {
+          "end_char": 288,
+          "end_line": 5,
+          "evidence_id": "synthetic:history:0:288",
+          "kind": "history",
+          "observed_at": null,
+          "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+          "source_id": "synthetic:history",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "history"
+        }
+      ],
+      "conflicts": [],
+      "evidence_gaps": [],
+      "historical_evidence": [
+        {
+          "citation": {
+            "end_char": 400,
+            "end_line": 6,
+            "evidence_id": "synthetic:ahu07_manual.md:0:400",
+            "kind": "manual",
+            "observed_at": null,
+            "quote": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n",
+            "source_id": "synthetic:ahu07_manual.md",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "ahu07_manual"
+          },
+          "text": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n"
+        },
+        {
+          "citation": {
+            "end_char": 318,
+            "end_line": 5,
+            "evidence_id": "synthetic:maintenance.md:0:318",
+            "kind": "maintenance",
+            "observed_at": null,
+            "quote": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n",
+            "source_id": "synthetic:maintenance.md",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "maintenance"
+          },
+          "text": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n"
+        },
+        {
+          "citation": {
+            "end_char": 288,
+            "end_line": 5,
+            "evidence_id": "synthetic:history:0:288",
+            "kind": "history",
+            "observed_at": null,
+            "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+            "source_id": "synthetic:history",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "history"
+          },
+          "text": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n"
+        }
+      ],
+      "hypotheses": [
+        {
+          "code": "airflow_restriction",
+          "confidence": "tentative",
+          "evidence_ids": [
+            "telemetry:Floor 7:temperature:0:30",
+            "telemetry:Floor 7:setpoint:0:25",
+            "telemetry:AHU-07:status:0:24",
+            "telemetry:AHU-07:supply_air_temperature:0:39",
+            "telemetry:VAV-7E-14:airflow_deficit:0:33"
+          ],
+          "text": "Reduced zone air delivery may be limiting cooling; a restriction or control fault remains a hypothesis even while the AHU is running."
+        },
+        {
+          "code": "damper_tracking_fault",
+          "confidence": "tentative",
+          "evidence_ids": [
+            "telemetry:Floor 7:temperature:0:30",
+            "telemetry:Floor 7:setpoint:0:25",
+            "telemetry:AHU-07:status:0:24",
+            "telemetry:AHU-07:supply_air_temperature:0:39",
+            "telemetry:VAV-7E-14:airflow_deficit:0:33",
+            "telemetry:VAV-7E-14:damper_command:0:32",
+            "telemetry:VAV-7E-14:damper_actual:0:31"
+          ],
+          "text": "A damper actuator, linkage, or position-feedback fault may explain the command/position mismatch and contribute to reduced cooling."
+        }
+      ],
+      "limitations": [
+        "Diagnostic hypotheses are tentative; evidence does not establish a confirmed root cause."
+      ],
+      "observations": [
+        {
+          "citation": {
+            "end_char": 30,
+            "end_line": 1,
+            "evidence_id": "telemetry:Floor 7:temperature:0:30",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "Floor 7: temperature = 27.4 \u00b0C",
+            "source_id": "telemetry:Floor 7:temperature",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "Floor 7 temperature"
+          },
+          "text": "Floor 7: temperature = 27.4 \u00b0C"
+        },
+        {
+          "citation": {
+            "end_char": 25,
+            "end_line": 1,
+            "evidence_id": "telemetry:Floor 7:setpoint:0:25",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "Floor 7: setpoint = 23 \u00b0C",
+            "source_id": "telemetry:Floor 7:setpoint",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "Floor 7 setpoint"
+          },
+          "text": "Floor 7: setpoint = 23 \u00b0C"
+        },
+        {
+          "citation": {
+            "end_char": 24,
+            "end_line": 1,
+            "evidence_id": "telemetry:AHU-07:status:0:24",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "AHU-07: status = Running",
+            "source_id": "telemetry:AHU-07:status",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "AHU-07 status"
+          },
+          "text": "AHU-07: status = Running"
+        },
+        {
+          "citation": {
+            "end_char": 39,
+            "end_line": 1,
+            "evidence_id": "telemetry:AHU-07:supply_air_temperature:0:39",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "AHU-07: supply_air_temperature = Normal",
+            "source_id": "telemetry:AHU-07:supply_air_temperature",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "AHU-07 supply_air_temperature"
+          },
+          "text": "AHU-07: supply_air_temperature = Normal"
+        },
+        {
+          "citation": {
+            "end_char": 33,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:airflow_deficit:0:33",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: airflow_deficit = 62 %",
+            "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 airflow_deficit"
+          },
+          "text": "VAV-7E-14: airflow_deficit = 62 %"
+        },
+        {
+          "citation": {
+            "end_char": 32,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:damper_command:0:32",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: damper_command = 85 %",
+            "source_id": "telemetry:VAV-7E-14:damper_command",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 damper_command"
+          },
+          "text": "VAV-7E-14: damper_command = 85 %"
+        },
+        {
+          "citation": {
+            "end_char": 31,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:damper_actual:0:31",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: damper_actual = 31 %",
+            "source_id": "telemetry:VAV-7E-14:damper_actual",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 damper_actual"
+          },
+          "text": "VAV-7E-14: damper_actual = 31 %"
+        }
+      ],
+      "question": "Why is Floor 7 getting warmer even though AHU-07 is running?",
+      "status": "answered",
+      "verification_steps": [
+        "Verify the airflow sensor reading against an independent measurement.",
+        "Have qualified staff inspect damper actuator/linkage and compare position feedback with the commanded position under the site's maintenance procedure.",
+        "Review maintenance records and time-aligned trends before confirming a root cause."
+      ]
+    },
+    "missing-history": {
+      "citations": [
+        {
+          "end_char": 30,
+          "end_line": 1,
+          "evidence_id": "telemetry:Floor 7:temperature:0:30",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "Floor 7: temperature = 27.4 \u00b0C",
+          "source_id": "telemetry:Floor 7:temperature",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "Floor 7 temperature"
+        },
+        {
+          "end_char": 25,
+          "end_line": 1,
+          "evidence_id": "telemetry:Floor 7:setpoint:0:25",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "Floor 7: setpoint = 23 \u00b0C",
+          "source_id": "telemetry:Floor 7:setpoint",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "Floor 7 setpoint"
+        },
+        {
+          "end_char": 24,
+          "end_line": 1,
+          "evidence_id": "telemetry:AHU-07:status:0:24",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "AHU-07: status = Running",
+          "source_id": "telemetry:AHU-07:status",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "AHU-07 status"
+        },
+        {
+          "end_char": 39,
+          "end_line": 1,
+          "evidence_id": "telemetry:AHU-07:supply_air_temperature:0:39",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "AHU-07: supply_air_temperature = Normal",
+          "source_id": "telemetry:AHU-07:supply_air_temperature",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "AHU-07 supply_air_temperature"
+        },
+        {
+          "end_char": 33,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:airflow_deficit:0:33",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: airflow_deficit = 62 %",
+          "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 airflow_deficit"
+        },
+        {
+          "end_char": 32,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:damper_command:0:32",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: damper_command = 85 %",
+          "source_id": "telemetry:VAV-7E-14:damper_command",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 damper_command"
+        },
+        {
+          "end_char": 31,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:damper_actual:0:31",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: damper_actual = 31 %",
+          "source_id": "telemetry:VAV-7E-14:damper_actual",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 damper_actual"
+        },
+        {
+          "end_char": 400,
+          "end_line": 6,
+          "evidence_id": "synthetic:ahu07_manual.md:0:400",
+          "kind": "manual",
+          "observed_at": null,
+          "quote": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n",
+          "source_id": "synthetic:ahu07_manual.md",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "ahu07_manual"
+        },
+        {
+          "end_char": 318,
+          "end_line": 5,
+          "evidence_id": "synthetic:maintenance.md:0:318",
+          "kind": "maintenance",
+          "observed_at": null,
+          "quote": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n",
+          "source_id": "synthetic:maintenance.md",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "maintenance"
+        }
+      ],
+      "conflicts": [],
+      "evidence_gaps": [
+        "No historical operational context is available."
+      ],
+      "historical_evidence": [
+        {
+          "citation": {
+            "end_char": 400,
+            "end_line": 6,
+            "evidence_id": "synthetic:ahu07_manual.md:0:400",
+            "kind": "manual",
+            "observed_at": null,
+            "quote": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n",
+            "source_id": "synthetic:ahu07_manual.md",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "ahu07_manual"
+          },
+          "text": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n"
+        },
+        {
+          "citation": {
+            "end_char": 318,
+            "end_line": 5,
+            "evidence_id": "synthetic:maintenance.md:0:318",
+            "kind": "maintenance",
+            "observed_at": null,
+            "quote": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n",
+            "source_id": "synthetic:maintenance.md",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "maintenance"
+          },
+          "text": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n"
+        }
+      ],
+      "hypotheses": [
+        {
+          "code": "airflow_restriction",
+          "confidence": "tentative",
+          "evidence_ids": [
+            "telemetry:Floor 7:temperature:0:30",
+            "telemetry:Floor 7:setpoint:0:25",
+            "telemetry:AHU-07:status:0:24",
+            "telemetry:AHU-07:supply_air_temperature:0:39",
+            "telemetry:VAV-7E-14:airflow_deficit:0:33"
+          ],
+          "text": "Reduced zone air delivery may be limiting cooling; a restriction or control fault remains a hypothesis even while the AHU is running."
+        },
+        {
+          "code": "damper_tracking_fault",
+          "confidence": "tentative",
+          "evidence_ids": [
+            "telemetry:Floor 7:temperature:0:30",
+            "telemetry:Floor 7:setpoint:0:25",
+            "telemetry:AHU-07:status:0:24",
+            "telemetry:AHU-07:supply_air_temperature:0:39",
+            "telemetry:VAV-7E-14:airflow_deficit:0:33",
+            "telemetry:VAV-7E-14:damper_command:0:32",
+            "telemetry:VAV-7E-14:damper_actual:0:31"
+          ],
+          "text": "A damper actuator, linkage, or position-feedback fault may explain the command/position mismatch and contribute to reduced cooling."
+        }
+      ],
+      "limitations": [
+        "Diagnostic hypotheses are tentative; evidence does not establish a confirmed root cause."
+      ],
+      "observations": [
+        {
+          "citation": {
+            "end_char": 30,
+            "end_line": 1,
+            "evidence_id": "telemetry:Floor 7:temperature:0:30",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "Floor 7: temperature = 27.4 \u00b0C",
+            "source_id": "telemetry:Floor 7:temperature",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "Floor 7 temperature"
+          },
+          "text": "Floor 7: temperature = 27.4 \u00b0C"
+        },
+        {
+          "citation": {
+            "end_char": 25,
+            "end_line": 1,
+            "evidence_id": "telemetry:Floor 7:setpoint:0:25",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "Floor 7: setpoint = 23 \u00b0C",
+            "source_id": "telemetry:Floor 7:setpoint",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "Floor 7 setpoint"
+          },
+          "text": "Floor 7: setpoint = 23 \u00b0C"
+        },
+        {
+          "citation": {
+            "end_char": 24,
+            "end_line": 1,
+            "evidence_id": "telemetry:AHU-07:status:0:24",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "AHU-07: status = Running",
+            "source_id": "telemetry:AHU-07:status",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "AHU-07 status"
+          },
+          "text": "AHU-07: status = Running"
+        },
+        {
+          "citation": {
+            "end_char": 39,
+            "end_line": 1,
+            "evidence_id": "telemetry:AHU-07:supply_air_temperature:0:39",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "AHU-07: supply_air_temperature = Normal",
+            "source_id": "telemetry:AHU-07:supply_air_temperature",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "AHU-07 supply_air_temperature"
+          },
+          "text": "AHU-07: supply_air_temperature = Normal"
+        },
+        {
+          "citation": {
+            "end_char": 33,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:airflow_deficit:0:33",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: airflow_deficit = 62 %",
+            "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 airflow_deficit"
+          },
+          "text": "VAV-7E-14: airflow_deficit = 62 %"
+        },
+        {
+          "citation": {
+            "end_char": 32,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:damper_command:0:32",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: damper_command = 85 %",
+            "source_id": "telemetry:VAV-7E-14:damper_command",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 damper_command"
+          },
+          "text": "VAV-7E-14: damper_command = 85 %"
+        },
+        {
+          "citation": {
+            "end_char": 31,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:damper_actual:0:31",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: damper_actual = 31 %",
+            "source_id": "telemetry:VAV-7E-14:damper_actual",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 damper_actual"
+          },
+          "text": "VAV-7E-14: damper_actual = 31 %"
+        }
+      ],
+      "question": "Why is Floor 7 getting warmer even though AHU-07 is running?",
+      "status": "answered",
+      "verification_steps": [
+        "Verify the airflow sensor reading against an independent measurement.",
+        "Have qualified staff inspect damper actuator/linkage and compare position feedback with the commanded position under the site's maintenance procedure.",
+        "Review maintenance records and time-aligned trends before confirming a root cause."
+      ]
+    },
+    "missing-records": {
+      "citations": [
+        {
+          "end_char": 30,
+          "end_line": 1,
+          "evidence_id": "telemetry:Floor 7:temperature:0:30",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "Floor 7: temperature = 27.4 \u00b0C",
+          "source_id": "telemetry:Floor 7:temperature",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "Floor 7 temperature"
+        },
+        {
+          "end_char": 25,
+          "end_line": 1,
+          "evidence_id": "telemetry:Floor 7:setpoint:0:25",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "Floor 7: setpoint = 23 \u00b0C",
+          "source_id": "telemetry:Floor 7:setpoint",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "Floor 7 setpoint"
+        },
+        {
+          "end_char": 24,
+          "end_line": 1,
+          "evidence_id": "telemetry:AHU-07:status:0:24",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "AHU-07: status = Running",
+          "source_id": "telemetry:AHU-07:status",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "AHU-07 status"
+        },
+        {
+          "end_char": 39,
+          "end_line": 1,
+          "evidence_id": "telemetry:AHU-07:supply_air_temperature:0:39",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "AHU-07: supply_air_temperature = Normal",
+          "source_id": "telemetry:AHU-07:supply_air_temperature",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "AHU-07 supply_air_temperature"
+        },
+        {
+          "end_char": 33,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:airflow_deficit:0:33",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: airflow_deficit = 62 %",
+          "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 airflow_deficit"
+        },
+        {
+          "end_char": 32,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:damper_command:0:32",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: damper_command = 85 %",
+          "source_id": "telemetry:VAV-7E-14:damper_command",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 damper_command"
+        },
+        {
+          "end_char": 31,
+          "end_line": 1,
+          "evidence_id": "telemetry:VAV-7E-14:damper_actual:0:31",
+          "kind": "telemetry",
+          "observed_at": "2026-10-21T08:00:00+00:00",
+          "quote": "VAV-7E-14: damper_actual = 31 %",
+          "source_id": "telemetry:VAV-7E-14:damper_actual",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "VAV-7E-14 damper_actual"
+        },
+        {
+          "end_char": 288,
+          "end_line": 5,
+          "evidence_id": "synthetic:history:0:288",
+          "kind": "history",
+          "observed_at": null,
+          "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+          "source_id": "synthetic:history",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "history"
+        }
+      ],
+      "conflicts": [],
+      "evidence_gaps": [
+        "No relevant manual or maintenance evidence is available."
+      ],
+      "historical_evidence": [
+        {
+          "citation": {
+            "end_char": 288,
+            "end_line": 5,
+            "evidence_id": "synthetic:history:0:288",
+            "kind": "history",
+            "observed_at": null,
+            "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+            "source_id": "synthetic:history",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "history"
+          },
+          "text": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n"
+        }
+      ],
+      "hypotheses": [
+        {
+          "code": "airflow_restriction",
+          "confidence": "tentative",
+          "evidence_ids": [
+            "telemetry:Floor 7:temperature:0:30",
+            "telemetry:Floor 7:setpoint:0:25",
+            "telemetry:AHU-07:status:0:24",
+            "telemetry:AHU-07:supply_air_temperature:0:39",
+            "telemetry:VAV-7E-14:airflow_deficit:0:33"
+          ],
+          "text": "Reduced zone air delivery may be limiting cooling; a restriction or control fault remains a hypothesis even while the AHU is running."
+        },
+        {
+          "code": "damper_tracking_fault",
+          "confidence": "tentative",
+          "evidence_ids": [
+            "telemetry:Floor 7:temperature:0:30",
+            "telemetry:Floor 7:setpoint:0:25",
+            "telemetry:AHU-07:status:0:24",
+            "telemetry:AHU-07:supply_air_temperature:0:39",
+            "telemetry:VAV-7E-14:airflow_deficit:0:33",
+            "telemetry:VAV-7E-14:damper_command:0:32",
+            "telemetry:VAV-7E-14:damper_actual:0:31"
+          ],
+          "text": "A damper actuator, linkage, or position-feedback fault may explain the command/position mismatch and contribute to reduced cooling."
+        }
+      ],
+      "limitations": [
+        "Diagnostic hypotheses are tentative; evidence does not establish a confirmed root cause."
+      ],
+      "observations": [
+        {
+          "citation": {
+            "end_char": 30,
+            "end_line": 1,
+            "evidence_id": "telemetry:Floor 7:temperature:0:30",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "Floor 7: temperature = 27.4 \u00b0C",
+            "source_id": "telemetry:Floor 7:temperature",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "Floor 7 temperature"
+          },
+          "text": "Floor 7: temperature = 27.4 \u00b0C"
+        },
+        {
+          "citation": {
+            "end_char": 25,
+            "end_line": 1,
+            "evidence_id": "telemetry:Floor 7:setpoint:0:25",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "Floor 7: setpoint = 23 \u00b0C",
+            "source_id": "telemetry:Floor 7:setpoint",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "Floor 7 setpoint"
+          },
+          "text": "Floor 7: setpoint = 23 \u00b0C"
+        },
+        {
+          "citation": {
+            "end_char": 24,
+            "end_line": 1,
+            "evidence_id": "telemetry:AHU-07:status:0:24",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "AHU-07: status = Running",
+            "source_id": "telemetry:AHU-07:status",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "AHU-07 status"
+          },
+          "text": "AHU-07: status = Running"
+        },
+        {
+          "citation": {
+            "end_char": 39,
+            "end_line": 1,
+            "evidence_id": "telemetry:AHU-07:supply_air_temperature:0:39",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "AHU-07: supply_air_temperature = Normal",
+            "source_id": "telemetry:AHU-07:supply_air_temperature",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "AHU-07 supply_air_temperature"
+          },
+          "text": "AHU-07: supply_air_temperature = Normal"
+        },
+        {
+          "citation": {
+            "end_char": 33,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:airflow_deficit:0:33",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: airflow_deficit = 62 %",
+            "source_id": "telemetry:VAV-7E-14:airflow_deficit",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 airflow_deficit"
+          },
+          "text": "VAV-7E-14: airflow_deficit = 62 %"
+        },
+        {
+          "citation": {
+            "end_char": 32,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:damper_command:0:32",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: damper_command = 85 %",
+            "source_id": "telemetry:VAV-7E-14:damper_command",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 damper_command"
+          },
+          "text": "VAV-7E-14: damper_command = 85 %"
+        },
+        {
+          "citation": {
+            "end_char": 31,
+            "end_line": 1,
+            "evidence_id": "telemetry:VAV-7E-14:damper_actual:0:31",
+            "kind": "telemetry",
+            "observed_at": "2026-10-21T08:00:00+00:00",
+            "quote": "VAV-7E-14: damper_actual = 31 %",
+            "source_id": "telemetry:VAV-7E-14:damper_actual",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "VAV-7E-14 damper_actual"
+          },
+          "text": "VAV-7E-14: damper_actual = 31 %"
+        }
+      ],
+      "question": "Why is Floor 7 getting warmer even though AHU-07 is running?",
+      "status": "insufficient_evidence",
+      "verification_steps": [
+        "Verify the airflow sensor reading against an independent measurement.",
+        "Have qualified staff inspect damper actuator/linkage and compare position feedback with the commanded position under the site's maintenance procedure.",
+        "Review maintenance records and time-aligned trends before confirming a root cause."
+      ]
+    },
+    "missing-telemetry": {
+      "citations": [
+        {
+          "end_char": 400,
+          "end_line": 6,
+          "evidence_id": "synthetic:ahu07_manual.md:0:400",
+          "kind": "manual",
+          "observed_at": null,
+          "quote": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n",
+          "source_id": "synthetic:ahu07_manual.md",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "ahu07_manual"
+        },
+        {
+          "end_char": 318,
+          "end_line": 5,
+          "evidence_id": "synthetic:maintenance.md:0:318",
+          "kind": "maintenance",
+          "observed_at": null,
+          "quote": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n",
+          "source_id": "synthetic:maintenance.md",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "maintenance"
+        },
+        {
+          "end_char": 288,
+          "end_line": 5,
+          "evidence_id": "synthetic:history:0:288",
+          "kind": "history",
+          "observed_at": null,
+          "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+          "source_id": "synthetic:history",
+          "start_char": 0,
+          "start_line": 1,
+          "title": "history"
+        }
+      ],
+      "conflicts": [],
+      "evidence_gaps": [
+        "No fresh telemetry is available for the requested scope.",
+        "Measurements do not support a validated HVAC hypothesis in the current rule set."
+      ],
+      "historical_evidence": [
+        {
+          "citation": {
+            "end_char": 400,
+            "end_line": 6,
+            "evidence_id": "synthetic:ahu07_manual.md:0:400",
+            "kind": "manual",
+            "observed_at": null,
+            "quote": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n",
+            "source_id": "synthetic:ahu07_manual.md",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "ahu07_manual"
+          },
+          "text": "# Synthetic AHU-07 / Floor 7 HVAC manual\n\nAHU-07 running status alone does not confirm adequate cooling at Floor 7 terminals.\nWhen AHU supply-air temperature is normal, investigate VAV zone airflow and damper feedback.\nFor VAV-7E-14, compare damper command and actual position; verify sensor accuracy before diagnosis.\nThis fixture is illustrative reference material, not a real manufacturer manual.\n"
+        },
+        {
+          "citation": {
+            "end_char": 318,
+            "end_line": 5,
+            "evidence_id": "synthetic:maintenance.md:0:318",
+            "kind": "maintenance",
+            "observed_at": null,
+            "quote": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n",
+            "source_id": "synthetic:maintenance.md",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "maintenance"
+          },
+          "text": "# Synthetic Floor 7 maintenance record: AHU-07 and VAV-7E-14\n\nOn 2026-09-18, a technician recorded intermittent position tracking at VAV-7E-14.\nThe record describes a linkage inspection and airflow sensor verification.\nThis historical incident does not establish the cause of the current Floor 7 temperature increase.\n"
+        },
+        {
+          "citation": {
+            "end_char": 288,
+            "end_line": 5,
+            "evidence_id": "synthetic:history:0:288",
+            "kind": "history",
+            "observed_at": null,
+            "quote": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n",
+            "source_id": "synthetic:history",
+            "start_char": 0,
+            "start_line": 1,
+            "title": "history"
+          },
+          "text": "# Synthetic Floor 7 operational history\n\nAn illustrative prior trend showed Floor 7 near its 23\u00b0C setpoint while AHU-07 was running.\nVAV-7E-14 airflow was within its expected range in that prior observation.\nThis is historical context, not current telemetry or proof of a repeated fault.\n"
+        }
+      ],
+      "hypotheses": [],
+      "limitations": [
+        "Diagnostic hypotheses are tentative; evidence does not establish a confirmed root cause."
+      ],
+      "observations": [],
+      "question": "Why is Floor 7 getting warmer even though AHU-07 is running?",
+      "status": "insufficient_evidence",
+      "verification_steps": [
+        "Collect fresh, time-aligned telemetry and relevant equipment records before diagnosis."
+      ]
+    }
+  }
+}

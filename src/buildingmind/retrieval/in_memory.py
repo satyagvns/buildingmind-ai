@@ -5,6 +5,7 @@ import math
 from buildingmind.context.models import Evidence
 from buildingmind.embeddings.base import EmbeddingProvider
 from buildingmind.retrieval.base import SearchHit
+from buildingmind.retrieval.filters import RetrievalFilter
 
 
 class InMemoryVectorStore:
@@ -45,6 +46,7 @@ class InMemoryVectorStore:
         min_score: float = 0.15,
         floor: str | None = None,
         equipment: tuple[str, ...] = (),
+        filters: RetrievalFilter | None = None,
     ) -> tuple[SearchHit, ...]:
         if top_k <= 0 or not math.isfinite(min_score) or not -1 <= min_score <= 1:
             raise ValueError("Invalid search limits")
@@ -58,6 +60,8 @@ class InMemoryVectorStore:
             raise ValueError("Query embedding dimension mismatch")
         hits = []
         for evidence, stored in self._entries.values():
+            if filters is not None and not filters.matches(evidence):
+                continue
             if floor is not None and evidence.floor != floor:
                 continue
             if equipment and not set(equipment).intersection(evidence.equipment):

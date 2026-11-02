@@ -19,7 +19,19 @@ class Fact(Model):
     quote: str = Field(min_length=1)
 
 
-class Evidence(Model):
+class SourceMetadata(Model):
+    building: str | None = None
+    zone: str | None = None
+    system: str | None = None
+    version: str | None = None
+    approval: Literal["approved", "superseded", "unknown"] = "unknown"
+    authority: int = Field(default=0, ge=0, le=100)
+    effective_at: AwareDatetime | None = None
+    updated_at: AwareDatetime | None = None
+    access_tags: tuple[str, ...] = ()
+
+
+class Evidence(SourceMetadata):
     id: str = Field(min_length=1)
     source_id: str = Field(min_length=1)
     title: str = Field(min_length=1)

@@ -1,0 +1,117 @@
+[
+  {
+    "source_id": "synthetic:review:long-service-log",
+    "title": "long-service-log",
+    "text": "VAV-7E-14 work order WO-0714: actuator hunting and intermittent position drift. A linkage coupling slipped during inspection. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions. Technician logged inspection of terminals, sensors, wiring, maintenance access and occupied-zone conditions.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "unknown",
+    "authority": 40,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:review:lookalike-asset",
+    "title": "lookalike-asset",
+    "text": "VAV-7E-140 actuator serial ZX-74190 work order WO-07140. Routine actuator maintenance position feedback inspection. This is a different terminal.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-140"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:review:electrical-maintenance",
+    "title": "electrical-maintenance",
+    "text": "AHU-07 hunting for missing maintenance paperwork. Drift in the work-order completion date; position in the scheduling queue. No mechanical actuator fault was reported.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "unknown",
+    "authority": 40,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:review:inspection-normal",
+    "title": "inspection-normal",
+    "text": "VAV-7E-14 inspection I-714 position = 31 %. AHU-07 damper inspection record.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z",
+    "facts": [
+      {
+        "subject": "VAV-7E-14",
+        "metric": "inspection_position",
+        "value": "31",
+        "unit": "%",
+        "scope": "inspection:I-714",
+        "quote": "VAV-7E-14 inspection I-714 position = 31 %"
+      }
+    ]
+  },
+  {
+    "source_id": "synthetic:review:inspection-disagrees",
+    "title": "inspection-disagrees",
+    "text": "VAV-7E-14 inspection I-714 position = 85 %. AHU-07 damper inspection record.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z",
+    "facts": [
+      {
+        "subject": "VAV-7E-14",
+        "metric": "inspection_position",
+        "value": "85",
+        "unit": "%",
+        "scope": "inspection:I-714",
+        "quote": "VAV-7E-14 inspection I-714 position = 85 %"
+      }
+    ]
+  }
+]
