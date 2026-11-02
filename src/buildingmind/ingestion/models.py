@@ -2,11 +2,10 @@ from typing import Literal
 
 from pydantic import Field, model_validator
 
-from buildingmind.context.models import Fact
-from buildingmind.models import Model
+from buildingmind.context.models import Fact, SourceMetadata
 
 
-class Document(Model):
+class Document(SourceMetadata):
     source_id: str = Field(min_length=1)
     title: str = Field(min_length=1)
     text: str = Field(min_length=1)

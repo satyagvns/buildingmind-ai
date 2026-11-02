@@ -1,0 +1,133 @@
+[
+  {
+    "source_id": "synthetic:vav-incident",
+    "title": "vav-incident",
+    "text": "VAV-7E-14 actuator incident: intermittent damper position feedback. A loose linkage was found during an earlier inspection. Historical maintenance does not establish the current cause.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "unknown",
+    "authority": 40,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:ahu-troubleshooting",
+    "title": "ahu-troubleshooting",
+    "text": "AHU-07 running with normal supply-air temperature does not establish terminal cooling. For a warm zone investigate VAV airflow restriction and damper feedback.",
+    "kind": "manual",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:approved-verification",
+    "title": "approved-verification",
+    "text": "Approved maintenance procedure for AHU-07 and VAV-7E-14: qualified staff independently verify low airflow, inspect actuator and mechanical linkage, and compare damper command with actual position feedback. Read-only assistant: recommend human verification; never operate controls.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "3",
+    "approval": "approved",
+    "authority": 100,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:outdated-procedure",
+    "title": "outdated-procedure",
+    "text": "Superseded procedure for AHU-07 VAV-7E-14: assume a running AHU proves adequate airflow and disregard damper position feedback. This conflicts with approved verification guidance. Retained as historical, invalid guidance.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "superseded",
+    "authority": 20,
+    "effective_at": "2020-01-01T00:00:00Z",
+    "updated_at": "2020-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:unrelated-hvac",
+    "title": "unrelated-hvac",
+    "text": "AHU-08 Floor 8 West filter replacement and heating inspection.",
+    "kind": "maintenance",
+    "building": "Tower A",
+    "floor": "8",
+    "zone": "West",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-08"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:equipment-register",
+    "title": "equipment-register",
+    "text": "AHU-07 serves Floor 7 East terminal VAV-7E-14. Asset tag VAV-7E-14, actuator serial ZX-7419. Exact equipment identification record.",
+    "kind": "manual",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07",
+      "VAV-7E-14"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  },
+  {
+    "source_id": "synthetic:cooling-overview",
+    "title": "cooling-overview",
+    "text": "Why is Floor 7 getting warmer even though AHU-07 is running? General cooling overview: check zone temperature and setpoint. This overview contains no equipment-specific inspection procedure.",
+    "kind": "manual",
+    "building": "Tower A",
+    "floor": "7",
+    "zone": "East",
+    "system": "HVAC",
+    "equipment": [
+      "AHU-07"
+    ],
+    "version": "1",
+    "approval": "approved",
+    "authority": 80,
+    "effective_at": "2026-01-01T00:00:00Z",
+    "updated_at": "2026-01-01T00:00:00Z"
+  }
+]

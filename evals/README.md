@@ -19,3 +19,9 @@ of real-world retrieval recall, semantic understanding, fault accuracy, or LLM q
 Additional integration tests cover missing sources, stale data, conflicting structured
 facts, invalid citations, and malicious source instructions. Production evaluation
 requires a larger domain-reviewed corpus, relevance labels, and confirmed outcomes.
+
+
+For v0.5 graded ranking comparisons and generation regressions, run
+`python -m evals.run_advanced` and `python -m evals.run_generation`.
+See [retrieval evaluation](../docs/retrieval_evaluation.md) for definitions, measured
+results and limitations. Machine-readable result snapshots are stored beside the runners.

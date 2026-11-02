@@ -1,0 +1,49 @@
+{
+  "limitations": "Extractive attribution and bounded rule checks do not prove source truth, causal correctness, or general answer relevance.",
+  "cases": [
+    {
+      "case": "full",
+      "status": "answered",
+      "answer_relevance_rule_codes": true,
+      "citation_validity": true,
+      "grounding_reference_check": true,
+      "evidence_completeness": true,
+      "unsupported_hypothesis_count": 0,
+      "expected_status": true,
+      "retrieval_complete": true
+    },
+    {
+      "case": "missing-telemetry",
+      "status": "insufficient_evidence",
+      "answer_relevance_rule_codes": true,
+      "citation_validity": true,
+      "grounding_reference_check": true,
+      "evidence_completeness": null,
+      "unsupported_hypothesis_count": 0,
+      "expected_status": true,
+      "retrieval_complete": true
+    },
+    {
+      "case": "denied-building",
+      "status": "insufficient_evidence",
+      "answer_relevance_rule_codes": true,
+      "citation_validity": true,
+      "grounding_reference_check": true,
+      "evidence_completeness": null,
+      "unsupported_hypothesis_count": 0,
+      "expected_status": true,
+      "retrieval_complete": true
+    },
+    {
+      "case": "missing-procedure",
+      "status": "insufficient_evidence",
+      "answer_relevance_rule_codes": true,
+      "citation_validity": true,
+      "grounding_reference_check": true,
+      "evidence_completeness": null,
+      "unsupported_hypothesis_count": 0,
+      "expected_status": true,
+      "retrieval_complete": true
+    }
+  ]
+}

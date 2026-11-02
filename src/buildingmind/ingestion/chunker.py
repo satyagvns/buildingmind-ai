@@ -26,6 +26,19 @@ def chunk_document(
                 title=document.title,
                 kind=document.kind,
                 text=text,
+                **document.model_dump(
+                    include={
+                        "building",
+                        "zone",
+                        "system",
+                        "version",
+                        "approval",
+                        "authority",
+                        "effective_at",
+                        "updated_at",
+                        "access_tags",
+                    }
+                ),
                 floor=document.floor,
                 equipment=document.equipment,
                 start_char=start,

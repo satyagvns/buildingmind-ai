@@ -3,7 +3,7 @@
 BuildingMind AI — an evolving reference implementation for production AI engineering,
 built around a Smart Building Operations use case.
 
-Version **0.4.0** provides a read-only retrieval-augmented diagnostic pipeline with
+Version **0.5.0** adds an opt-in advanced/hybrid RAG pipeline. The existing v0.4 path provides a read-only retrieval-augmented diagnostic pipeline with
 validated citations, explicit evidence gaps, deterministic offline providers, and an
 optional OpenAI adapter. It uses Python 3.12+ and Pydantic v2. No agent framework is required.
 
@@ -123,8 +123,8 @@ uses an in-process HTTP transport and a placeholder credential.
 ```bash
 python -m pytest --cov=buildingmind --cov-report=term-missing
 python -m pytest tests/evals -v
-ruff check src tests examples
-ruff format --check src tests examples
+ruff check src tests examples evals
+ruff format --check src tests examples evals
 ```
 
 The suite blocks socket access within the test process. It covers provenance and source
@@ -136,7 +136,7 @@ SDK is absent.
 See [verification results](docs/verification.md), [evaluation fixtures](evals/README.md),
 and [implementation milestones](docs/implementation-plan.md).
 
-## Current limits and next work
+## Legacy v0.4 path limits and next work
 
 - UTF-8 text/Markdown ingestion and in-memory storage only; no PDF/OCR or persistent index.
 - Production embeddings, telemetry, history adapters, and equipment relationship discovery
@@ -152,3 +152,33 @@ and [implementation milestones](docs/implementation-plan.md).
 
 The package exposes read-only diagnostics. It contains no building control tools or
 actuation path.
+
+
+## v0.5 advanced and hybrid RAG
+
+```bash
+python -m examples.advanced_floor7
+python -m evals.run_advanced
+python -m evals.run_generation
+```
+
+The advanced pipeline adds deterministic query understanding/expansion, BM25 plus the
+existing vector index, early building/source authorization filters, reciprocal rank
+fusion, optional reranking, source authority/version policy and whole-evidence prompt
+budgeting. It returns `(DiagnosticResponse, RetrievalReport)` so backend completeness,
+scores, ranks and latency are inspectable. The original example and `RAGPipeline` remain
+available; the advanced path requires independently supplied trusted authorization.
+
+All records are fictional. The advanced demonstration cites a current approved procedure,
+retains superseded evidence with explicit policy issues, and preserves tentative HVAC
+hypotheses. Structured conflicts cause abstention. The default context budget is an
+approximate UTF-8-byte proxy, with an injectable local tokenizer for text-token counting.
+There are no new mandatory dependencies. Optional `.[reranking]` installs
+`sentence-transformers` for an explicitly configured cross-encoder; default runs never
+load or download that model.
+
+See [advanced architecture](docs/advanced_rag_architecture.md),
+[measured retrieval comparison](docs/retrieval_evaluation.md), and
+[recorded demonstration](docs/floor7_advanced_output.json). The small synthetic benchmark
+shows equal recall across strategies and a small hybrid nDCG difference; it establishes
+neither production semantic-search quality nor confirmed physical causes.
