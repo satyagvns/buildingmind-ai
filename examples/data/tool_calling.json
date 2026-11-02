@@ -1,0 +1,155 @@
+{
+  "resources": [
+    {
+      "building_id": "tower-a",
+      "equipment_id": "AHU-07",
+      "floor": 7,
+      "zone": "East"
+    },
+    {
+      "building_id": "tower-a",
+      "equipment_id": "VAV-7E-14",
+      "floor": 7,
+      "zone": "East"
+    },
+    {
+      "building_id": "tower-b",
+      "equipment_id": "AHU-07",
+      "floor": 7,
+      "zone": "East"
+    },
+    {
+      "building_id": "tower-a",
+      "equipment_id": "AHU-03",
+      "floor": 3,
+      "zone": "East"
+    }
+  ],
+  "telemetry": [
+    {
+      "resource": {
+        "building_id": "tower-a",
+        "equipment_id": "AHU-07",
+        "floor": 7,
+        "zone": "East"
+      },
+      "source_id": "synthetic_bms:tower-a:AHU-07",
+      "simulated": true,
+      "observed_at": "2026-10-21T08:00:00Z",
+      "data_quality": "valid",
+      "readings": [
+        {
+          "metric": "status",
+          "value": "Running",
+          "unit": ""
+        },
+        {
+          "metric": "supply_air_temperature",
+          "value": "Normal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "resource": {
+        "building_id": "tower-a",
+        "equipment_id": "VAV-7E-14",
+        "floor": 7,
+        "zone": "East"
+      },
+      "source_id": "synthetic_bms:tower-a:VAV-7E-14",
+      "simulated": true,
+      "observed_at": "2026-10-21T08:00:00Z",
+      "data_quality": "valid",
+      "readings": [
+        {
+          "metric": "temperature",
+          "value": "27.4",
+          "unit": "\u00b0C"
+        },
+        {
+          "metric": "setpoint",
+          "value": "23",
+          "unit": "\u00b0C"
+        },
+        {
+          "metric": "airflow_deficit",
+          "value": "62",
+          "unit": "%"
+        },
+        {
+          "metric": "damper_command",
+          "value": "85",
+          "unit": "%"
+        },
+        {
+          "metric": "damper_actual",
+          "value": "31",
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "equipment": [
+    {
+      "resource": {
+        "building_id": "tower-a",
+        "equipment_id": "AHU-07",
+        "floor": 7,
+        "zone": "East"
+      },
+      "source_id": "synthetic_registry:tower-a:AHU-07",
+      "simulated": true,
+      "equipment_type": "AHU",
+      "manufacturer": null,
+      "model": null,
+      "specifications": [
+        "AHU fan status and supply-air quality are separate observations."
+      ],
+      "related_equipment": [
+        "VAV-7E-14"
+      ]
+    },
+    {
+      "resource": {
+        "building_id": "tower-a",
+        "equipment_id": "VAV-7E-14",
+        "floor": 7,
+        "zone": "East"
+      },
+      "source_id": "synthetic_registry:tower-a:VAV-7E-14",
+      "simulated": true,
+      "equipment_type": "VAV",
+      "manufacturer": null,
+      "model": null,
+      "specifications": [
+        "Position command and feedback use percent."
+      ],
+      "related_equipment": [
+        "AHU-07"
+      ]
+    }
+  ],
+  "maintenance": [
+    {
+      "resource": {
+        "building_id": "tower-a",
+        "equipment_id": "VAV-7E-14",
+        "floor": 7,
+        "zone": "East"
+      },
+      "source_id": "synthetic_cmms:tower-a:VAV-7E-14",
+      "simulated": true,
+      "events": [
+        {
+          "work_order_id": "WO-0714",
+          "event_at": "2026-09-18T09:00:00Z",
+          "fault": "Intermittent VAV-7E-14 actuator position tracking discrepancy.",
+          "action": "Qualified technician inspected linkage and verified airflow sensor.",
+          "resolution": "unknown",
+          "source_id": "synthetic_cmms:WO-0714"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@ from buildingmind.models import Model
 
 
 def test_package_version():
-    assert __version__ == "0.5.0"
+    assert __version__ == "0.6.0"
 
 
 def test_boundary_models_reject_unknown_fields():

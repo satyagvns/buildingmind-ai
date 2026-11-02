@@ -1,0 +1,10 @@
+{
+  "baseline_commit": "a580df1b7667f4340f9f3d2df00ad6e30e320498",
+  "test_results": {
+    "released_v05": "103 passed, 1 skipped in 1.36s",
+    "current_source": "102 passed, 1 skipped, 1 deselected in 1.23s"
+  },
+  "intentional_exclusion": "Only the archived package-version assertion is excluded against current source.",
+  "snapshot_comparison": "equal: four legacy scenarios with normalized evidence IDs; full advanced response and ranking with timing fields removed",
+  "compatibility": "No existing evidence models, source IDs, retrieval/generation interfaces or diagnostic behavior changed."
+}
