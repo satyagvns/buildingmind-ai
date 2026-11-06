@@ -32,3 +32,17 @@ measures 240 warm latency samples per mode. `python -m evals.check_legacy_regres
 runs archived v0.4 tests and compares normalized public responses. The latter requires
 local git object `22cbddc` and uses a temporary directory without switching branches.
 See [pre-merge verification](../docs/premerge_verification.md).
+
+
+## v0.6 tool calling
+
+`python -m evals.run_tool_calling` evaluates 24 labeled normal/adversarial scenarios from
+`tool_calling_cases.json`. `tool_calling_results.json` records raw counts, denominators,
+case outcomes and local timing samples. Selection accuracy covers deterministic mock
+selection only; injected attacks intentionally lower overall argument/execution rates.
+See [tool verification](../docs/tool_calling_verification.md) for definitions and limits.
+
+`python -m evals.check_v05_regression` exports the released v0.5 commit to a temporary
+directory, runs its archived tests against released/current source and compares four
+legacy snapshots plus the full advanced answer/ranking. It requires git history containing
+`a580df1b7667f4340f9f3d2df00ad6e30e320498`; CI fetches full history for this check.

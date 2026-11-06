@@ -3,7 +3,7 @@
 BuildingMind AI — an evolving reference implementation for production AI engineering,
 built around a Smart Building Operations use case.
 
-Version **0.5.0** adds an opt-in advanced/hybrid RAG pipeline. The existing v0.4 path provides a read-only retrieval-augmented diagnostic pipeline with
+Version **0.6.0** adds controlled read-only tool calling alongside the v0.5 advanced/hybrid RAG pipeline. The existing v0.4 path provides a read-only retrieval-augmented diagnostic pipeline with
 validated citations, explicit evidence gaps, deterministic offline providers, and an
 optional OpenAI adapter. It uses Python 3.12+ and Pydantic v2. No agent framework is required.
 
@@ -187,3 +187,46 @@ neither production semantic-search quality nor confirmed physical causes.
 For the expanded pre-merge retrieval/security/regression review and repeated latency
 measurements, see [pre-merge verification](docs/premerge_verification.md). Reproduce with
 `python -m evals.run_premerge` and `python -m evals.check_legacy_regression`.
+
+
+## v0.6 secure tool calling — Article 6
+
+From the repository root, using the existing environment without requiring activation:
+
+```bash
+.venv/bin/python -m examples.tool_calling_floor7
+.venv/bin/python -m pytest tests/test_tool_gateway.py tests/test_tool_orchestration.py tests/test_tool_provider.py tests/test_tool_evaluations.py -v
+.venv/bin/python -m evals.run_tool_calling
+.venv/bin/python -m evals.check_v05_regression
+```
+
+The demo executes four authorized reads over two proposal rounds: equipment details,
+AHU telemetry, related VAV telemetry and maintenance history. Measurements are explicitly
+**simulated**, timestamped observations. The answer cites approved procedures and proposes
+actuator/linkage/feedback trouble tentatively, without confirming a root cause.
+The JSON includes `answer`, `tool_results`, `evidence_provenance`, limits/timings and safe
+audit events. The fixture clock is fixed to its snapshot; it does not claim live readings.
+
+The tools are `get_live_telemetry`, `get_equipment_details` and
+`get_maintenance_history`. All model proposals pass through typed validation, trusted
+principal/resource grants and the gateway. Backends repeat authorization before data
+access. Unknown/write tools, URLs, identity/role spoofing and arbitrary extra arguments
+are rejected. Defaults allow at most two proposal rounds and five gateway attempts;
+running timed-out work retains its concurrency slot and cannot enter later context.
+
+There are no new mandatory dependencies. Existing optional OpenAI support can be selected
+explicitly, using an account-accessible model supporting native tools and structured output:
+
+```bash
+# Install the existing openai extra and configure OPENAI_API_KEY through your normal secret workflow.
+.venv/bin/python -m examples.tool_calling_floor7 --provider openai --model YOUR_MODEL
+```
+
+Selecting this option sends authorized synthetic evidence to the configured API. No real
+model or building API was contacted during verification. Default execution needs no keys,
+model downloads or external services. Tests use fake clients/in-process SDK transport.
+
+See [architecture](docs/tool_calling_architecture.md), [security boundaries](docs/tool_calling_security.md),
+[measured verification](docs/tool_calling_verification.md), and
+[recorded Floor 7 output](docs/tool_calling_floor7_output.json). The package version is
+0.6.0; release tagging follows PR review and merge, not this implementation step.

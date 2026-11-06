@@ -1,0 +1,857 @@
+{
+  "limitations": "Synthetic deterministic fixtures; selection accuracy applies only to mock-selector cases. Adversarial selectors intentionally lower argument/execution rates. Grounding checks do not prove source truth or general factual accuracy. Latencies are one local sample per case, not load benchmarks.",
+  "metrics": {
+    "tool_selection_accuracy": {
+      "numerator": 11,
+      "denominator": 11,
+      "value": 1.0
+    },
+    "tool_argument_validity": {
+      "numerator": 34,
+      "denominator": 39,
+      "value": 0.8717948717948718
+    },
+    "authorization_enforcement": {
+      "numerator": 8,
+      "denominator": 8,
+      "value": 1.0
+    },
+    "tool_execution_success_rate": {
+      "numerator": 22,
+      "denominator": 34,
+      "value": 0.6470588235294118
+    },
+    "tool_result_schema_validity": {
+      "numerator": 22,
+      "denominator": 23,
+      "value": 0.9565217391304348
+    },
+    "evidence_provenance_completeness": {
+      "numerator": 27,
+      "denominator": 27,
+      "value": 1.0
+    },
+    "grounded_answer_case_checks": {
+      "numerator": 24,
+      "denominator": 24,
+      "value": 1.0
+    },
+    "unsupported_hypotheses": 0,
+    "unsupported_claim_detection": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "unnecessary_mock_tool_call_rate": {
+      "numerator": 0,
+      "denominator": 21,
+      "value": 0.0
+    },
+    "unnecessary_tool_call_rate": {
+      "numerator": 14,
+      "denominator": 39,
+      "value": 0.358974358974359
+    }
+  },
+  "tool_latency": {
+    "samples": 34,
+    "median_ms": 0.247310999839101,
+    "p95_ms": 1.7325919998256722
+  },
+  "end_to_end_latency": {
+    "samples": 24,
+    "median_ms": 10.029110000232322,
+    "p95_ms": 21.205494000241742
+  },
+  "cases": [
+    {
+      "case": "floor7-diagnosis",
+      "expected_checks_pass": true,
+      "status": "answered",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_equipment_details",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_maintenance_history"
+      ],
+      "tool_selection_correct": true,
+      "argument_valid": 4,
+      "proposals": 4,
+      "gateway_attempts": 4,
+      "execution_successes": 4,
+      "schema_valid_results": 4,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 4,
+      "denial_check": null,
+      "tool_citations": 9,
+      "provenance_complete": 9,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.0006070429999454063,
+        0.00040520600032323273,
+        0.00025774099958653096,
+        0.00021655399996234337
+      ],
+      "end_to_end_seconds": 0.021205494000241742,
+      "rounds": 2
+    },
+    {
+      "case": "authorized-telemetry",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": true,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 1,
+      "schema_valid_results": 1,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 1,
+      "denial_check": null,
+      "tool_citations": 5,
+      "provenance_complete": 5,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.00041036499987967545
+      ],
+      "end_to_end_seconds": 0.015949179000017466,
+      "rounds": 2
+    },
+    {
+      "case": "tower-b-denied",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "denied",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [],
+      "tool_selection_correct": true,
+      "argument_valid": 0,
+      "proposals": 0,
+      "gateway_attempts": 0,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [],
+      "end_to_end_seconds": 9.657100054027978e-05,
+      "rounds": 0
+    },
+    {
+      "case": "floor3-denied",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "denied",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [],
+      "tool_selection_correct": true,
+      "argument_valid": 0,
+      "proposals": 0,
+      "gateway_attempts": 0,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [],
+      "end_to_end_seconds": 0.00013279700033308472,
+      "rounds": 0
+    },
+    {
+      "case": "missing-identity",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "denied",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [],
+      "tool_selection_correct": true,
+      "argument_valid": 0,
+      "proposals": 0,
+      "gateway_attempts": 0,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [],
+      "end_to_end_seconds": 2.6329000320401974e-05,
+      "rounds": 0
+    },
+    {
+      "case": "missing-equipment",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "missing-equipment",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 0,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "invalid_arguments"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        6.487099926744122e-05
+      ],
+      "end_to_end_seconds": 0.014194573999702698,
+      "rounds": 2
+    },
+    {
+      "case": "invalid-metric",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "invalid-metric",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 0,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "invalid_arguments"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        7.93979997979477e-05
+      ],
+      "end_to_end_seconds": 0.008916811999370111,
+      "rounds": 2
+    },
+    {
+      "case": "unknown-tool",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "unknown-tool",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "set_hvac_setpoint"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 0,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "unknown_tool"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        4.503399941313546e-05
+      ],
+      "end_to_end_seconds": 0.00872482399972796,
+      "rounds": 2
+    },
+    {
+      "case": "identity-spoof",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "identity-spoof",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 0,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "invalid_arguments"
+      ],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        4.827999964618357e-05
+      ],
+      "end_to_end_seconds": 0.01066405800065695,
+      "rounds": 2
+    },
+    {
+      "case": "ssrf",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "ssrf",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 0,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "invalid_arguments"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        7.009099954302656e-05
+      ],
+      "end_to_end_seconds": 0.01818838599956507,
+      "rounds": 2
+    },
+    {
+      "case": "backend-timeout",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "one-telemetry",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "timeout"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.012650405999920622
+      ],
+      "end_to_end_seconds": 0.029176834000281815,
+      "rounds": 2
+    },
+    {
+      "case": "backend-malformed",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "one-telemetry",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 1,
+      "errors": [
+        "invalid_result"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.0017325919998256722
+      ],
+      "end_to_end_seconds": 0.017653658999734034,
+      "rounds": 2
+    },
+    {
+      "case": "backend-failure",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "one-telemetry",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "backend_failure"
+      ],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.0002703849995668861
+      ],
+      "end_to_end_seconds": 0.009394161999807693,
+      "rounds": 2
+    },
+    {
+      "case": "stale-telemetry",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_equipment_details",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_maintenance_history"
+      ],
+      "tool_selection_correct": true,
+      "argument_valid": 4,
+      "proposals": 4,
+      "gateway_attempts": 4,
+      "execution_successes": 4,
+      "schema_valid_results": 4,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 4,
+      "denial_check": null,
+      "tool_citations": 2,
+      "provenance_complete": 2,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.00039935499989951495,
+        0.0003820020001512603,
+        0.00025252100022044033,
+        0.00021709500015276717
+      ],
+      "end_to_end_seconds": 0.01484804499978054,
+      "rounds": 2
+    },
+    {
+      "case": "conflicting-maintenance",
+      "expected_checks_pass": true,
+      "status": "conflicting_evidence",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_equipment_details",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_maintenance_history"
+      ],
+      "tool_selection_correct": true,
+      "argument_valid": 4,
+      "proposals": 4,
+      "gateway_attempts": 4,
+      "execution_successes": 4,
+      "schema_valid_results": 4,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 4,
+      "denial_check": null,
+      "tool_citations": 2,
+      "provenance_complete": 2,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.0003869009997288231,
+        0.00024976599979709135,
+        0.00023253400013345527,
+        0.0002578009998615016
+      ],
+      "end_to_end_seconds": 0.017389605000062147,
+      "rounds": 2
+    },
+    {
+      "case": "maintenance-injection",
+      "expected_checks_pass": true,
+      "status": "answered",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_equipment_details",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_maintenance_history"
+      ],
+      "tool_selection_correct": true,
+      "argument_valid": 4,
+      "proposals": 4,
+      "gateway_attempts": 4,
+      "execution_successes": 4,
+      "schema_valid_results": 4,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 4,
+      "denial_check": null,
+      "tool_citations": 9,
+      "provenance_complete": 9,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.000463925000076415,
+        0.00026656699992599897,
+        0.00022877699939272134,
+        0.00022924699987925123
+      ],
+      "end_to_end_seconds": 0.016329686000062793,
+      "rounds": 2
+    },
+    {
+      "case": "reference-without-tools",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [],
+      "tool_selection_correct": true,
+      "argument_valid": 0,
+      "proposals": 0,
+      "gateway_attempts": 0,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [],
+      "end_to_end_seconds": 0.008494501000313903,
+      "rounds": 1
+    },
+    {
+      "case": "control-refused",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "control_refused",
+      "selector": "mock",
+      "unsupported_detection": null,
+      "proposed_tools": [],
+      "tool_selection_correct": true,
+      "argument_valid": 0,
+      "proposals": 0,
+      "gateway_attempts": 0,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 0,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [],
+      "end_to_end_seconds": 6.1032999838062096e-05,
+      "rounds": 0
+    },
+    {
+      "case": "repeated-loop",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "loop",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 6,
+      "proposals": 6,
+      "gateway_attempts": 1,
+      "execution_successes": 1,
+      "schema_valid_results": 1,
+      "schema_invalid_results": 0,
+      "errors": [
+        "duplicate_call",
+        "duplicate_call",
+        "duplicate_call",
+        "duplicate_call",
+        "duplicate_call"
+      ],
+      "backend_accesses": 1,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 5,
+      "tool_latency_seconds": [
+        0.0013315009991856641
+      ],
+      "end_to_end_seconds": 0.014768162999644119,
+      "rounds": 2
+    },
+    {
+      "case": "gateway-building-denied",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "denied-building",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "unauthorized"
+      ],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        5.954100015514996e-05
+      ],
+      "end_to_end_seconds": 0.009019015999911062,
+      "rounds": 2
+    },
+    {
+      "case": "gateway-floor-denied",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "denied-floor",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "unauthorized"
+      ],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        4.536399956123205e-05
+      ],
+      "end_to_end_seconds": 0.008642028999929607,
+      "rounds": 2
+    },
+    {
+      "case": "gateway-zone-denied",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "denied-zone",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "unauthorized"
+      ],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        4.432199966686312e-05
+      ],
+      "end_to_end_seconds": 0.008604720000221278,
+      "rounds": 2
+    },
+    {
+      "case": "gateway-equipment-denied",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "tool_errors",
+      "selector": "denied-equipment",
+      "unsupported_detection": null,
+      "proposed_tools": [
+        "get_live_telemetry"
+      ],
+      "tool_selection_correct": null,
+      "argument_valid": 1,
+      "proposals": 1,
+      "gateway_attempts": 1,
+      "execution_successes": 0,
+      "schema_valid_results": 0,
+      "schema_invalid_results": 0,
+      "errors": [
+        "unauthorized"
+      ],
+      "backend_accesses": 0,
+      "denial_check": true,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 1,
+      "tool_latency_seconds": [
+        5.440200038719922e-05
+      ],
+      "end_to_end_seconds": 0.009259809000468522,
+      "rounds": 2
+    },
+    {
+      "case": "forged-generation",
+      "expected_checks_pass": true,
+      "status": "insufficient_evidence",
+      "outcome": "completed",
+      "selector": "mock",
+      "unsupported_detection": true,
+      "proposed_tools": [
+        "get_equipment_details",
+        "get_live_telemetry",
+        "get_live_telemetry",
+        "get_maintenance_history"
+      ],
+      "tool_selection_correct": true,
+      "argument_valid": 4,
+      "proposals": 4,
+      "gateway_attempts": 4,
+      "execution_successes": 4,
+      "schema_valid_results": 4,
+      "schema_invalid_results": 0,
+      "errors": [],
+      "backend_accesses": 4,
+      "denial_check": null,
+      "tool_citations": 0,
+      "provenance_complete": 0,
+      "citation_validity": true,
+      "unsupported_hypotheses": 0,
+      "unnecessary_proposals": 0,
+      "tool_latency_seconds": [
+        0.0004868179994446109,
+        0.0002448559998811106,
+        0.00022528999943460803,
+        0.00020980099998268997
+      ],
+      "end_to_end_seconds": 0.014972596999541565,
+      "rounds": 2
+    }
+  ]
+}

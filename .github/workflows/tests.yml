@@ -17,6 +17,8 @@ jobs:
         python-version: ['3.12', '3.14']
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
@@ -24,11 +26,14 @@ jobs:
       - run: ruff check src tests examples evals
       - run: ruff format --check src tests examples evals
       - run: python -m pytest --cov=buildingmind --cov-report=term-missing
+      - run: python -m evals.check_v05_regression
 
   optional-sdk:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
